@@ -16,6 +16,7 @@
     @Html.HiddenFor(model => model.EngineerId)
 
     <h3>Engineer Name: @Html.EditorFor(model => model.EngineerName)</h3>
+    @* <h3>Assigned Machines: @Html.Label("Machines") @Html.DropDownList("MachineId")</h3> *@
 
     <input type="submit" value="Save" class="btn btn-success" />
 }
