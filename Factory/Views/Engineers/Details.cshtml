@@ -17,7 +17,7 @@
 }
 else
 {
-    <h3>Licensed Machines:</h3>
+    <h3>Assigned Machines:</h3>
     <ul>
     @foreach (var join in Model.Machines)
         {
@@ -26,22 +26,22 @@ else
     </ul>
 }
 <hr/>
-<h3>Remove Machines:</h3>
+
 <ul>
 @foreach(var join in Model.Machines)
 {
-    <li>Do you want to remove: @join.Machine.MachineName ?</li>
     @using (Html.BeginForm("DeleteMachine", "Engineers"))
     {
         @Html.Hidden("joinId", @join.EngineerMachineId)
-        <input type="submit" value="Delete" class="btn btn-danger"/>
+        <li>Remove Machine: @join.Machine.MachineName  <input type="submit" value="Delete" class="btn btn-danger"/> </li>
     }
 }
 </ul>
 <hr/>
-<h3>@Html.ActionLink("Edit Engineer Details", "Edit", new { id = Model.EngineerId })</h3>
-<h3>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</h3>
-<h3>@Html.ActionLink("Assign Machine", "AddMachine", new { id = Model.EngineerId })</p>
+<h4>@Html.ActionLink("Assign Machine", "AddMachine", new { id = Model.EngineerId })</h4>
+<h4>@Html.ActionLink("Edit Details", "Edit", new { id = Model.EngineerId })</h4>
+<h4>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</h4>
 <hr/>
 <h4>@Html.ActionLink("Engineer List", "Index")</h4>
+<h4>@Html.ActionLink("Machine List", "Index", "Machines")</h4>
 <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>

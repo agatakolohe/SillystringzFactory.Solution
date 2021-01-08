@@ -5,13 +5,13 @@
 @model Factory.Models.Engineer
 
 <div class="jumbotron">
-    <h1>Add a New Engineer</h1>
+    <h1>Add New Engineer</h1>
 </div>
 
 @using (Html.BeginForm())
 {
-    <h3>Engineer Name: @Html.TextBoxFor(model => model.EngineerName)</h3>
-    <input type="submit" value="Add Engineer" class="btn btn-primary">
+    <h3>Engineer Name: @Html.TextBoxFor(model => model.EngineerName) <input type="submit" value="Add Engineer"
+        class="btn btn-primary"></h3>
 }
 <hr />
 <h4>@Html.ActionLink("Engineer List", "Index")</h4>

@@ -18,7 +18,7 @@
 }
 else
 {
-    <h3>Licensed Engineers:</h3>
+    <h3>Assigned Engineers:</h3>
     <ul>
     @foreach (var join in Model.Engineers)
         {
@@ -39,9 +39,10 @@ else
 }
 </ul>
 <hr/>
-<h3>@Html.ActionLink("Edit Machine Details", "Edit", new { id = Model.MachineId })</h3>
-<h3>@Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</h3>
-<h3>@Html.ActionLink("Assign Engineer", "AddEngineer", new { id = Model.MachineId })</p>
+<h4>@Html.ActionLink("Assign Engineer", "AddEngineer", new { id = Model.MachineId })</h4>
+<h4>@Html.ActionLink("Edit Details", "Edit", new { id = Model.MachineId })</h4>
+<h4>@Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</h4>
 <hr/>
 <h4>@Html.ActionLink("Machine List", "Index")</h4>
+<h4>@Html.ActionLink("Engineer List", "Index", "Engineers")</h4>
 <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
