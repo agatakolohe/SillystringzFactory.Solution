@@ -1,0 +1,47 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<div class="jumbotron">
+    <h1>Machine Details</h1>
+</div>
+
+<h2>Machine Name: @Html.DisplayFor(model => model.MachineName)</h2>
+<h2>Machine Description: @Html.DisplayFor(model => model.MachineDescription)</h2>
+<hr />
+
+@if (@Model.Engineers.Count == 0)
+{
+    <h3>This machine is currently not licensed to any engineers.</h3>
+}
+else
+{
+    <h3>Licensed Engineers:</h3>
+    <ul>
+    @foreach (var join in Model.Engineers)
+        {
+            <li>@join.Engineer.EngineerName</li>
+        }
+    </ul>
+}
+<hr/>
+<ul>
+@foreach(var join in Model.Engineers)
+{
+    <li>Do you want to delete: @join.Engineer.EngineerName ?</li>
+    @using (Html.BeginForm("DeleteEngineer", "Machines"))
+    {
+        @Html.Hidden("joinId", @join.EngineerMachineId)
+        <input type="submit" value="Delete" class="btn btn-danger"/>
+    }
+}
+</ul>
+<hr/>
+<h3>@Html.ActionLink("Edit Machine Details", "Edit", new { id = Model.MachineId })</h3>
+<h3>@Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</h3>
+<h3>@Html.ActionLink("Assign Engineer", "AddEngineer", new { id = Model.MachineId })</p>
+<hr/>
+<h4>@Html.ActionLink("Machine List", "Index")</h4>
+<h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
