@@ -7,11 +7,12 @@
 <div class="jumbotron">
     <h1>Machine Details</h1>
 </div>
-
+<div class="machineStyle">
 <h2>Machine Name: @Html.DisplayFor(model => model.MachineName)</h2>
 <h2>Machine Description: @Html.DisplayFor(model => model.MachineDescription)</h2>
+</div>
 <hr />
-
+<div class="machineStyle">
 @if (@Model.Engineers.Count == 0)
 {
     <h3>This machine is currently not licensed to any engineers.</h3>
@@ -26,7 +27,9 @@ else
         }
     </ul>
 }
+
 <hr/>
+
 <ul>
 @foreach(var join in Model.Engineers)
 {
@@ -38,6 +41,10 @@ else
     }
 }
 </ul>
+</div>
+<hr/>
+<div class="links">
+<h3>Navigation Links</h3>
 <hr/>
 <h4>@Html.ActionLink("Assign Engineer", "AddEngineer", new { id = Model.MachineId })</h4>
 <h4>@Html.ActionLink("Edit Details", "Edit", new { id = Model.MachineId })</h4>
@@ -46,3 +53,4 @@ else
 <h4>@Html.ActionLink("Machine List", "Index")</h4>
 <h4>@Html.ActionLink("Engineer List", "Index", "Engineers")</h4>
 <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+</div>

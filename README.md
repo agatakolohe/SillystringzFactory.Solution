@@ -78,7 +78,7 @@ MySQL is a type of database software used to create, edit, query, and manage SQL
 
 <details>
 
-  <summary>Expand for Database Installation Essentials!</summary>
+  <summary>Expand for Database Installation/Update Essentials!</summary>
 
 #### Database Connection
 
@@ -120,7 +120,7 @@ Create a connection string to connect the database to the web application
 
 </details>
 
-##### View In Browser
+#### View In Browser
 
 - To view in browser, navigate to `Factory` folder in the command line
 - Use the command `dotnet run` to execute the compiled code and start a localhost

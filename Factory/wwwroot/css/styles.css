@@ -9,7 +9,7 @@ a:hover {
   color: #ab4e03;
 }
 a {
-  font-size: x-large;
+  font-size: large;
   color: white;
 }
 
@@ -31,4 +31,15 @@ a {
   background-color: #192e37;
   opacity: 0.8;
   float: left;
+}
+.machineStyle {
+  background-color: #192e37;
+  opacity: 0.8;
+  padding: 5%;
+}
+.links {
+  text-align: center;
+  background-color: #2c4759;
+  opacity: 0.8;
+  padding: 5%;
 }

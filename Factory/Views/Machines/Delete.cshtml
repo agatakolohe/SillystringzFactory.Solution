@@ -7,12 +7,17 @@
 <div class="jumbotron">
     <h1>Delete Machine</h1>
 </div>
-<h3>Are you sure you want to delete: @Html.DisplayFor(model => model.MachineName)?</h3>
+<div class="machineStyle">
+    <h3>Are you sure you want to delete: @Html.DisplayFor(model => model.MachineName)?</h3>
 
-@using (Html.BeginForm())
-{
-    <input type="submit" value="Delete" class="btn btn-danger" />
-}
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    }
+</div>
 <hr />
-<h4>@Html.ActionLink("Machine List", "Index")</h4>
-<h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+<div class="links">
+    <h3>Navigation Links</h3>
+    <h4>@Html.ActionLink("Machine List", "Index")</h4>
+    <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+</div>
