@@ -19,6 +19,13 @@ Tenth independent project for Epicodus to demonstrate my understanding of C#, CR
 <details>
   <summary>Expand User Stories</summary>
 
+- As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines.
+- As the factory manager, I need to be able to select an engineer, see their details, and see a list of all machines that engineer is licensed to repair. I also need to be able to select a machine, see its details, and see a list of all engineers licensed to repair it.
+- As the factory manager, I need to add new engineers to our system when they are hired. I also need to add new machines to our system when they are installed.
+- As the factory manager, I should be able to add new machines even if no engineers are employed. I should also be able to add new engineers even if no machines are installed.
+- As the factory manager, I need to be able to add or remove machines that a specific engineer is licensed to repair. I also need to be able to modify this relationship from the other side, and add or remove engineers from a specific machine.
+- I should be able to navigate to a splash page that lists all engineers and machines. Users should be able to click on an individual engineer or machine to see all the engineers/machines that belong to it.
+
 </details>
 
 ## Setup/Installation Requirements
@@ -31,9 +38,9 @@ Tenth independent project for Epicodus to demonstrate my understanding of C#, CR
 
 ##### Open Locally
 
-- Click on the link to my repository: [My Repository]()
+- Click on the link to my repository: [My Repository](https://github.com/agatakolohe/SillystringzFactory.Solution.git)
 - Click on the green "Code" button and copy the repository URL
-- Open your terminal and use the command `git clone REPO URL HERE` into the directory you would like to clone the repository
+- Open your terminal and use the command `git clone https://github.com/agatakolohe/SillystringzFactory.Solution.git` into the directory you would like to clone the repository
 - Open in text editor to view code and make changes
 
 ##### Installing .NET
@@ -61,19 +68,19 @@ MySQL is a type of database software used to create, edit, query, and manage SQL
 
 ##### Compiling
 
-- Navigate to the TODO folder in the command line
+- Navigate to the `Factory` folder in the command line
 - Use the command `dotnet build` to compile
 
 ##### Installing Packages
 
-- Navigate to the TODO folder in the command line
+- Navigate to the `Factory` folder in the command line
 - Use the command `dotnet restore`
 
 <details>
 
   <summary>Expand for Database Installation Essentials!</summary>
 
-### Database Connection
+#### Database Connection
 
 Create a connection string to connect the database to the web application
 
@@ -83,22 +90,21 @@ Create a connection string to connect the database to the web application
 ```
 {
     "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=agata_kolodziej;uid=root;pwd=YourPassword;"
+        "DefaultConnection": "Server=localhost;Port=3306;database=agata_kolodziej_factory;uid=root;pwd=YourPassword;"
     }
 }
 ```
 
-- TODO CHANGE DBNAME
 - Put in your MySQL password in `pwd=YourPassword`. Change the server, port, and uid if necessary.
 
 ### Import Database Using Entity Framework Core
 
-1. Navigate to TODO directory in terminal
+1. Navigate to `Factory` directory in terminal
 2. Use the command `dotnet ef database update` to generate the database through Entity Framework Core
 
 ### Update Database Using Entity Framework Core
 
-1. Write any new code you wish to add to the database. Use the command `dotnet build` to check for any compiling errors. If no errors, proceed to step 2.
+1. Write any new code you wish to add to the database. Use the command `dotnet build` to check for any compiling errors. If there are errors please fix. If no errors, proceed to step 2.
 2. To update the database with any changes made to the code, use the command `dotnet ef migrations add [MigrationsName]`
 3. Use the command `dotnet ef database update` to update the database
 
@@ -116,13 +122,15 @@ Create a connection string to connect the database to the web application
 
 ##### View In Browser
 
-- To view in browser, navigate to TODO folder in the command line
+- To view in browser, navigate to `Factory` folder in the command line
 - Use the command `dotnet run` to execute the compiled code and start a localhost
 - In browser navigate to http://localhost:5000
 
 ## Known Bugs
 
 TODO
+
+If you change the styling of the application and you do not see your updated styles, please open a new Incognito Window in your browser and you should be able to see your updated styles. The browser caches styles and therefore may not show changes.
 
 ## Support and Contact Details
 
@@ -148,4 +156,4 @@ If any errors or bugs occur with installation, delete both bin and obj folders a
 
 This software is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
-Copyright (c) 2020 Agata Kolodziej <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Q_3EVY7j95tTyemJwWxMR7jwvUK7gPe0_w&usqp=CAU" width="2%" height="auto">
+Copyright (c) 2021 Agata Kolodziej <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Q_3EVY7j95tTyemJwWxMR7jwvUK7gPe0_w&usqp=CAU" width="2%" height="auto">
