@@ -16,7 +16,7 @@
 
     <h3>Machine Name: @Html.EditorFor(model => model.MachineName)</h3>
     <h3>Machine Description: @Html.EditorFor(model => model.MachineDescription)</h3>
-    <h3>Assigned Engineers: @Html.Label("Engineers") @Html.DropDownList("EngineerId")</h3>
+    <h3>@Html.Label("Engineers") @Html.DropDownList("EngineerId")</h3>
 
     <input type="submit" value="Save" class="btn btn-success" />
 }

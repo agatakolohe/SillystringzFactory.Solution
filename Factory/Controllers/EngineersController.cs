@@ -56,7 +56,12 @@ namespace Factory.Controllers
         {
             if (MachineId != 0)
             {
-                _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+                var returnedJoin = _db.EngineerMachine
+                .Any(join => join.EngineerId == engineer.EngineerId && join.MachineId == MachineId);
+                if (!returnedJoin)
+                {
+                    _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+                }
             }
             _db.Entry(engineer).State = EntityState.Modified;
             _db.SaveChanges();
@@ -76,7 +81,7 @@ namespace Factory.Controllers
             if (MachineId != 0)
             {
                 var returnedJoin = _db.EngineerMachine
-                .Any(join => join.EngineerId == engineer.engineerId && join.MachineId == MachineId);
+                .Any(join => join.EngineerId == engineer.EngineerId && join.MachineId == MachineId);
                 if (!returnedJoin)
                 {
                     _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });
