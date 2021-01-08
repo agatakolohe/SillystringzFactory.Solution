@@ -1,28 +1,23 @@
 <div align="center">
 
-# Application Name
+# Dr.Sillystringz's Factory
 
 </div>
 
 <div align="center">
 <img src="https://github.com/agatakolohe.png" width="200px" height="auto" >
 </div>
-<h3 align="center">Description of application, date-2020</h3>
+<h3 align="center">Many-To-Many Relationships Database Application with C# Independent Project for Epicodus, 01-08-2021</h3>
 <h4 align="center"> By Agata Kolodziej</h4>
 
 ## Description
 
-Purpose usage, detailed explanation what is does and any other information you want users and other developers to have
+Tenth independent project for Epicodus to demonstrate my understanding of C#, CRUD methods, creating an MVC web application using a many-to-many database relationship with MySQL and Entity. This application will track "Dr. Sillystringz's" (user) machine repairs. It will manage their engineers and their licenses to repair certain machines. There is a many-to-many relationship between Engineer and Machine. An Engineer can be licensed to repair many machines and a machine can have many engineers licensed to repair it.
 
-## Specifications/User Stories
+## User Stories
 
 <details>
-  <summary>Expand</summary>
-
-### Describe: Name()
-
-| Test | Expect |
-| ---- | ------ |
+  <summary>Expand User Stories</summary>
 
 </details>
 
