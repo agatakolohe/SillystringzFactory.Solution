@@ -1,0 +1,20 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<div class="jumbotron">
+    <h1>Add New Machine</h1>
+</div>
+
+@using (Html.BeginForm())
+{
+    <h3>Machine Name: @Html.TextBoxFor(model => model.MachineName)</h3>
+    <h3>Machine Description: @Html.TextBoxFor(model => model.MachineDescription)</h3>
+
+    <input type="submit" value="Add Machine" class="btn btn-primary">
+}
+
+<h4>@Html.ActionLink("Machine List", "Index")</h4>
+<h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
