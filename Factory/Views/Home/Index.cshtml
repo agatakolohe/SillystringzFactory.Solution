@@ -5,22 +5,31 @@
 
 <div class="jumbotron">
     <h1>Dr. Sillystrings's Factory</h1>
-    <h2>Welcome To Your Engineers and Machines Log</h2>
-    <h3>@Html.ActionLink("View All Engineers", "Index", "Engineers")</h3>
-    <h3>@Html.ActionLink("View All Machines", "Index", "Machines")</h3>
-
+    <h2>Engineers and Machines Log</h2>
+    <h3>Click on Engineer's Name or Machine Name to View Details</h3>
+    <hr />
+    <h4>@Html.ActionLink("Add New Engineer", "Create", "Engineers")</h4>
+    <h4>@Html.ActionLink("Add New Machine", "Create", "Machines")</h4>
 </div>
-<ul>
-    @foreach (Engineer engineer in @Model["engineers"])
-    {
-        <li>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })
-        </li>
-    }
-</ul>
-<ul>
-    @foreach (Machine machine in @Model["machines"])
-    {
-        <li>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId })</li>
-    }
-</ul>
-@* changes to lists *@
+<div class="engineer">
+    <ul>
+        <h2>Current Engineers</h2>
+        <hr style="width:80%">
+        @foreach (Engineer engineer in @Model["engineers"])
+        {
+            <li>@Html.ActionLink($"{engineer.EngineerName}", "Details", "Engineers", new { id = engineer.EngineerId })
+            </li>
+        }
+    </ul>
+</div>
+<div class="machine">
+    <ul>
+
+        <h2>Current Machines</h2>
+        <hr style="width:80%">
+        @foreach (Machine machine in @Model["machines"])
+        {
+            <li>@Html.ActionLink($"{machine.MachineName}", "Details", "Machines", new { id = machine.MachineId })</li>
+        }
+    </ul>
+</div>
