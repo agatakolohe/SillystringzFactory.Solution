@@ -1,8 +1,12 @@
 body {
-  background: darkcyan;
-  color: white;
+  background: #008b8b;
+  color: black;
 }
 
 a {
-  color: black;
+  color: blue;
+}
+.jumbotron {
+  background: gray;
+  text-align: center;
 }
