@@ -1,0 +1,16 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class="jumbotron">
+    <h1>Delete Engineer</h1>
+</div>
+<h3>Are you sure you want to delete @Html.DisplayFor(model => model.EngineerName)?</h3>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" class="btn btn-danger" />
+}
+
+<h4>@Html.ActionLink("Engineer List", "Index")</h4>
+<h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
