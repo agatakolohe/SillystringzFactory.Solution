@@ -1,6 +1,7 @@
 @{
     Layout = "_Layout";
 }
+@using Factory.Models;
 
 <div class="jumbotron">
     <h1>Dr. Sillystrings's Factory</h1>
@@ -9,3 +10,17 @@
     <h3>@Html.ActionLink("View All Machines", "Index", "Machines")</h3>
 
 </div>
+<ul>
+    @foreach (Engineer engineer in @Model["engineers"])
+    {
+        <li>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })
+        </li>
+    }
+</ul>
+<ul>
+    @foreach (Machine machine in @Model["machines"])
+    {
+        <li>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId })</li>
+    }
+</ul>
+@* changes to lists *@

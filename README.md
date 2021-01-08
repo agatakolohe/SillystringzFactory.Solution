@@ -7,12 +7,12 @@
 <div align="center">
 <img src="https://github.com/agatakolohe.png" width="200px" height="auto" >
 </div>
-<h3 align="center">Many-To-Many Relationships Database Application with C# Independent Project for Epicodus, 01-08-2021</h3>
+<h3 align="center">Many-To-Many Relationships Database Web Application  Independent Project for Epicodus, 01-08-2021</h3>
 <h4 align="center"> By Agata Kolodziej</h4>
 
 ## Description
 
-Tenth independent project for Epicodus to demonstrate my understanding of C#, CRUD methods, creating an MVC web application using a many-to-many database relationship with MySQL and Entity. This application will track "Dr. Sillystringz's" (user) machine repairs. It will manage their engineers and their licenses to repair certain machines. There is a many-to-many relationship between Engineer and Machine. An Engineer can be licensed to repair many machines and a machine can have many engineers licensed to repair it.
+Tenth independent project for Epicodus to demonstrate my understanding of C#, CRUD methods, creating an MVC web application using a many-to-many database relationship with MySQL, MySQL Workbench and Entity. This application will track "Dr. Sillystringz's" (user) machine repairs. It will manage their engineers and their licenses to repair certain machines. There is a many-to-many relationship between Engineer and Machine. An Engineer can be licensed to repair many machines and a machine can have many engineers licensed to repair it.
 
 ## User Stories
 
@@ -125,12 +125,11 @@ Create a connection string to connect the database to the web application
 - To view in browser, navigate to `Factory` folder in the command line
 - Use the command `dotnet run` to execute the compiled code and start a localhost
 - In browser navigate to http://localhost:5000
+- Enjoy the application!
 
 ## Known Bugs
 
-TODO
-
-If you change the styling of the application and you do not see your updated styles, please open a new Incognito Window in your browser and you should be able to see your updated styles. The browser caches styles and therefore may not show changes.
+If you decide to change the styling of the application and you do not see your updated styles in the browser, please open a new Incognito Window in your browser and you should be able to see your updated styles. The browser caches styles and therefore may not show changes.
 
 ## Support and Contact Details
 
