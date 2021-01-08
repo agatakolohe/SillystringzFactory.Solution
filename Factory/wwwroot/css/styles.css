@@ -5,6 +5,9 @@ body {
   background-size: cover;
   color: #7aa1bf;
 }
+a:hover {
+  color: #ab4e03;
+}
 a {
   font-size: x-large;
   color: white;
@@ -16,12 +19,14 @@ a {
   text-align: center;
 }
 .machine {
+  border-radius: 10%;
   width: 30%;
   float: right;
   opacity: 0.8;
   background-color: #192e37;
 }
 .engineer {
+  border-radius: 10%;
   width: 30%;
   background-color: #192e37;
   opacity: 0.8;
