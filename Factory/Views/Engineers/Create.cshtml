@@ -7,12 +7,17 @@
 <div class="jumbotron">
     <h1>Add New Engineer</h1>
 </div>
-
-@using (Html.BeginForm())
-{
-    <h3>Engineer Name: @Html.TextBoxFor(model => model.EngineerName) <input type="submit" value="Add Engineer"
-        class="btn btn-primary"></h3>
-}
+<div class="engineStyle">
+    @using (Html.BeginForm())
+    {
+        <h3>Engineer Name: @Html.TextBoxFor(model => model.EngineerName) <input type="submit" value="Add Engineer"
+                class="btn btn-primary"></h3>
+    }
+</div>
 <hr />
-<h4>@Html.ActionLink("Engineer List", "Index")</h4>
-<h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+<div class="links">
+    <h3>Navigation Links</h3>
+    <hr />
+    <h4>@Html.ActionLink("Engineer List", "Index")</h4>
+    <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+</div>

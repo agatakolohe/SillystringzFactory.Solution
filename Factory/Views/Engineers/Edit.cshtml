@@ -7,19 +7,25 @@
 <div class="jumbotron">
     <h1>Edit Engineer Details</h1>
 </div>
-
-<h2>Engineer: @Html.DisplayFor(model => model.EngineerName)</h2>
+<div class="engineStyle">
+    <h2>Engineer: @Html.DisplayFor(model => model.EngineerName)</h2>
+</div>
 <hr />
+<div class="engineStyle">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.EngineerId)
 
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.EngineerId)
+        <h3>Engineer Name: @Html.EditorFor(model => model.EngineerName)</h3>
+        <h3>@Html.Label("Machines") @Html.DropDownList("MachineId")</h3>
 
-    <h3>Engineer Name: @Html.EditorFor(model => model.EngineerName)</h3>
-    <h3>@Html.Label("Machines") @Html.DropDownList("MachineId")</h3>
-
-    <input type="submit" value="Save" class="btn btn-success" />
-}
+        <input type="submit" value="Save" class="btn btn-success" />
+    }
+</div>
 <hr />
-<h4>@Html.ActionLink("Engineer List", "Index")</h4>
-<h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+<div class="links">
+    <h3>Navigation Links</h3>
+    <hr />
+    <h4>@Html.ActionLink("Engineer List", "Index")</h4>
+    <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+</div>

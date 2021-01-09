@@ -7,18 +7,23 @@
 <div class="jumbotron">
     <h1>Assign Machine License</h1>
 </div>
-
-<h2>Add Machine For: @Html.DisplayFor(model => model.EngineerName)</h2>
+<div class="engineStyle">
+    <h2>Add Machine For: @Html.DisplayFor(model => model.EngineerName)</h2>
+</div>
 <hr />
-
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.EngineerId)
-    <h3>Current Machines: @Html.DropDownList("MachineId") </h3>
-    <input type="submit" value="Save" class="btn btn-warning" />
-}
-
+<div class="engineStyle">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.EngineerId)
+        <h3>Current Machines: @Html.DropDownList("MachineId") </h3>
+        <input type="submit" value="Save" class="btn btn-warning" />
+    }
+</div>
 <hr />
-<h4>@Html.ActionLink("Engineer List", "Index")</h4>
-<h4>@Html.ActionLink("Machine List", "Index", "Machines")</h4>
-<h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+<div class="links">
+    <h3>Navigation Links</h3>
+    <hr />
+    <h4>@Html.ActionLink("Engineer List", "Index")</h4>
+    <h4>@Html.ActionLink("Machine List", "Index", "Machines")</h4>
+    <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+</div>

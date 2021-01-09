@@ -7,10 +7,11 @@
 <div class="jumbotron">
     <h1>Engineer Details</h1>
 </div>
-
+<div class="engineStyle">
 <h2>Engineer Name: @Html.DisplayFor(model => model.EngineerName)</h2>
+</div>
 <hr />
-
+<div class="engineStyle">
 @if (@Model.Machines.Count == 0)
 {
     <h3>This engineer is currently not licensed to any machines.</h3>
@@ -26,7 +27,6 @@ else
     </ul>
 }
 <hr/>
-
 <ul>
 @foreach(var join in Model.Machines)
 {
@@ -37,11 +37,16 @@ else
     }
 }
 </ul>
+</div>
 <hr/>
-<h4>@Html.ActionLink("Assign Machine", "AddMachine", new { id = Model.EngineerId })</h4>
-<h4>@Html.ActionLink("Edit Details", "Edit", new { id = Model.EngineerId })</h4>
-<h4>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</h4>
-<hr/>
-<h4>@Html.ActionLink("Engineer List", "Index")</h4>
-<h4>@Html.ActionLink("Machine List", "Index", "Machines")</h4>
-<h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+<div class="links">
+    <h3>Navigation Links</h3>
+       <hr />
+    <h4>@Html.ActionLink("Assign Machine", "AddMachine", new { id = Model.EngineerId })</h4>
+    <h4>@Html.ActionLink("Edit Details", "Edit", new { id = Model.EngineerId })</h4>
+    <h4>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</h4>
+    <hr/>
+    <h4>@Html.ActionLink("Engineer List", "Index")</h4>
+    <h4>@Html.ActionLink("Machine List", "Index", "Machines")</h4>
+    <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
+</div>
