@@ -10,7 +10,7 @@
 <div class="engineStyle">
     <h2>Add Machine For: @Html.DisplayFor(model => model.EngineerName)</h2>
 </div>
-<hr />
+<hr style="width:80%" />
 <div class="engineStyle">
     @using (Html.BeginForm())
     {
@@ -19,10 +19,10 @@
         <input type="submit" value="Save" class="btn btn-warning" />
     }
 </div>
-<hr />
+<hr style="width:80%" />
 <div class="links">
     <h3>Navigation Links</h3>
-    <hr />
+    <hr style="width:80%" />
     <h4>@Html.ActionLink("Engineer List", "Index")</h4>
     <h4>@Html.ActionLink("Machine List", "Index", "Machines")</h4>
     <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>

@@ -18,16 +18,18 @@ a {
   text-align: center;
 }
 .machine {
-  border-radius: 10%;
+  border-style: solid;
+  border-color: #2c4759;
   width: 30%;
   float: right;
   opacity: 0.8;
-  background-color: #192e37;
+  background-color: #050708;
 }
 .engineer {
-  border-radius: 10%;
+  border-style: solid;
+  border-color: #2c4759;
   width: 30%;
-  background-color: #192e37;
+  background-color: #050708;
   opacity: 0.8;
   float: left;
 }
@@ -46,4 +48,7 @@ a {
   background-color: #12222e;
   opacity: 0.8;
   padding: 5%;
+}
+.none {
+  color: #d86303;
 }

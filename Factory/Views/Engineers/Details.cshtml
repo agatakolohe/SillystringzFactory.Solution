@@ -10,7 +10,9 @@
 <div class="engineStyle">
 <h2>Engineer Name: @Html.DisplayFor(model => model.EngineerName)</h2>
 </div>
-<hr />
+
+<hr style="width:80%" />
+
 <div class="engineStyle">
 @if (@Model.Machines.Count == 0)
 {
@@ -26,7 +28,9 @@ else
         }
     </ul>
 }
-<hr/>
+
+<hr style="width:80%"/>
+
 <ul>
 @foreach(var join in Model.Machines)
 {
@@ -38,14 +42,15 @@ else
 }
 </ul>
 </div>
-<hr/>
+
+<hr style="width:80%"/>
 <div class="links">
     <h3>Navigation Links</h3>
-       <hr />
+       <hr style="width:80%" />
     <h4>@Html.ActionLink("Assign Machine", "AddMachine", new { id = Model.EngineerId })</h4>
     <h4>@Html.ActionLink("Edit Details", "Edit", new { id = Model.EngineerId })</h4>
     <h4>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</h4>
-    <hr/>
+    <hr style="width:80%"/>
     <h4>@Html.ActionLink("Engineer List", "Index")</h4>
     <h4>@Html.ActionLink("Machine List", "Index", "Machines")</h4>
     <h4>@Html.ActionLink("Home Page", "Index", "Home")</h4>
