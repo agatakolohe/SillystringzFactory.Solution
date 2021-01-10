@@ -15,6 +15,9 @@ namespace Factory.Models
         public string MachineName { get; set; }
         public string MachineDescription { get; set; }
         public string MachineStatus { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}")]
+        public DateTime InspectionDate { get; set; }
         public ICollection<EngineerMachine> Engineers { get; }
 
     }

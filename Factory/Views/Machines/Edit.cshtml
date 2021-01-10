@@ -24,6 +24,9 @@
         <h4>@Html.RadioButtonFor(model => model.MachineStatus, "Operational") Operational</h4>
         <h4>@Html.RadioButtonFor(model => model.MachineStatus, "Malfunctioning") Malfunctioning</h4>
         <h4>@Html.RadioButtonFor(model => model.MachineStatus, "Under Repair") Under Repair</h4>
+        <h3>Inspection Date:</h3>
+        @Html.TextBoxFor(model => model.InspectionDate, "{0:yyyy-MM-dd}", new {type="date"})
+
         <h3>@Html.Label("Engineers") @Html.DropDownList("EngineerId")</h3>
 
         <input type="submit" value="Save" class="btn btn-success" />
