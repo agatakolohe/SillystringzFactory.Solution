@@ -10,8 +10,11 @@
 <div class="engineStyle">
     @using (Html.BeginForm())
     {
-        <h3>Engineer Name: @Html.TextBoxFor(model => model.EngineerName) <input type="submit" value="Add Engineer"
-                class="btn btn-primary"></h3>
+        <h3>Engineer Name: @Html.TextBoxFor(model => model.EngineerName)</h3>
+        <h3>Engineer Status: </h3>
+        <h4>@Html.RadioButtonFor(model => model.EngineerStatus, "Idle") Idle</h4>
+        <h4>@Html.RadioButtonFor(model => model.EngineerStatus, "Active") Active</h4>
+        <input type="submit" value="Add Engineer" class="btn btn-primary">
     }
 </div>
 <hr style="width:80%" />
