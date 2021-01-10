@@ -20,6 +20,8 @@
         <h3>Engineer Status:</h3>
         <h4>@Html.RadioButtonFor(model => model.EngineerStatus, "Idle") Idle</h4>
         <h4>@Html.RadioButtonFor(model => model.EngineerStatus, "Active") Active</h4>
+        <h3>License Renewal Date: @Html.TextBoxFor(model => model.LicenseRenewalDate, "{0:yyyy-MM-dd}", new {type="date"})
+        </h3>
         <h3>@Html.Label("Machines") @Html.DropDownList("MachineId")</h3>
 
         <input type="submit" value="Save" class="btn btn-success" />
