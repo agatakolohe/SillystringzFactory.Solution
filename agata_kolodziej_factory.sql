@@ -35,7 +35,7 @@ CREATE TABLE `__EFMigrationsHistory` (
 
 LOCK TABLES `__EFMigrationsHistory` WRITE;
 /*!40000 ALTER TABLE `__EFMigrationsHistory` DISABLE KEYS */;
-INSERT INTO `__EFMigrationsHistory` VALUES ('20210108165357_Initial','2.2.6-servicing-10079');
+INSERT INTO `__EFMigrationsHistory` VALUES ('20210108165357_Initial','2.2.6-servicing-10079'),('20210110005425_AddMachineStatus','2.2.6-servicing-10079'),('20210110005818_AddEngineerStatus','2.2.6-servicing-10079'),('20210110010245_AddInspectionDate','2.2.6-servicing-10079'),('20210110010635_AddLicenseRenewalDate','2.2.6-servicing-10079');
 /*!40000 ALTER TABLE `__EFMigrationsHistory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +55,7 @@ CREATE TABLE `EngineerMachine` (
   KEY `IX_EngineerMachine_MachineId` (`MachineId`),
   CONSTRAINT `FK_EngineerMachine_Engineers_EngineerId` FOREIGN KEY (`EngineerId`) REFERENCES `engineers` (`EngineerId`) ON DELETE CASCADE,
   CONSTRAINT `FK_EngineerMachine_Machines_MachineId` FOREIGN KEY (`MachineId`) REFERENCES `machines` (`MachineId`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,8 +77,10 @@ DROP TABLE IF EXISTS `Engineers`;
 CREATE TABLE `Engineers` (
   `EngineerId` int(11) NOT NULL AUTO_INCREMENT,
   `EngineerName` longtext,
+  `EngineerStatus` longtext,
+  `LicenseRenewalDate` datetime(6) NOT NULL DEFAULT '0001-01-01 00:00:00.000000',
   PRIMARY KEY (`EngineerId`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,8 +103,10 @@ CREATE TABLE `Machines` (
   `MachineId` int(11) NOT NULL AUTO_INCREMENT,
   `MachineName` longtext,
   `MachineDescription` longtext,
+  `MachineStatus` longtext,
+  `InspectionDate` datetime(6) NOT NULL DEFAULT '0001-01-01 00:00:00.000000',
   PRIMARY KEY (`MachineId`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,4 +127,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-08 15:13:17
+-- Dump completed on 2021-01-09 17:11:34
